@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: (~{::head}, ~{::body})}">
+<head>
+    <title>Form Lớp</title>
+</head>
+<body>
+    <div th:fragment="content">
+        <h2>Form Lớp</h2>
+        <form th:action="@{/classes}" th:object="${classEntity}" method="post">
+            <label>Trường:</label>
+            <select th:field="*{school.id}" required>
+                <option value="">Chọn trường</option>
+                <option th:each="school : ${schools}" th:value="${school.id}" th:text="${school.name}"></option>
+            </select><br/>
+            <label>Tên:</label>
+            <input th:field="*{name}" required/><br/>
+            <label>Khối:</label>
+            <input th:field="*{gradeLevel}" type="number" min="1" max="12" required/><br/>
+            <label>Năm học:</label>
+            <input th:field="*{schoolYear}" required/><br/>
+            <label>Sĩ số:</label>
+            <input th:field="*{capacity}" type="number" min="1" required/><br/>
+            <label>Giáo viên chủ nhiệm:</label>
+            <select th:field="*{homeroomTeacher.id}">
+                <option value="">Không áp dụng</option>
+                <option th:each="teacher : ${teachers}" th:value="${teacher.id}" th:text="${teacher.fullName}"></option>
+            </select><br/>
+            <label>Trạng thái:</label>
+            <select th:field="*{status}" required>
+                <option value="ACTIVE">Hoạt động</option>
+                <option value="INACTIVE">Không hoạt động</option>
+            </select><br/>
+            <input type="hidden" th:field="*{id}"/>
+            <button type="submit">Lưu</button>
+            <a th:href="@{/classes}">Hủy</a>
+        </form>
+    </div>
+</body>
+</html>

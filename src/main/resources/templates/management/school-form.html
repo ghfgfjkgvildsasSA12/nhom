@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: (~{::head}, ~{::body})}">
+<head>
+    <title>Form Trường</title>
+</head>
+<body>
+    <div th:fragment="content">
+        <h2>Form Trường</h2>
+        <form th:action="@{/schools}" th:object="${school}" method="post">
+            <label>Tên:</label>
+            <input th:field="*{name}" required/><br/>
+            <label>Mã:</label>
+            <input th:field="*{code}" required/><br/>
+            <label>Địa chỉ:</label>
+            <input th:field="*{address}"/><br/>
+            <label>Email:</label>
+            <input th:field="*{email}" type="email"/><br/>
+            <label>Điện thoại:</label>
+            <input th:field="*{phone}"/><br/>
+            <label>Trạng thái:</label>
+            <select th:field="*{status}" required>
+                <option value="ACTIVE">Hoạt động</option>
+                <option value="INACTIVE">Không hoạt động</option>
+            </select><br/>
+            <input type="hidden" th:field="*{id}"/>
+            <button type="submit">Lưu</button>
+            <a th:href="@{/schools}">Hủy</a>
+        </form>
+    </div>
+</body>
+</html>

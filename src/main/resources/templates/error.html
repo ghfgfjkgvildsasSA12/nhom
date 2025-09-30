@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: (~{::head}, ~{::body})}">
+<head>
+    <title>Lỗi</title>
+</head>
+<body>
+    <div th:fragment="content">
+        <h2>Lỗi</h2>
+        <p th:text="${error} ?: 'Có lỗi xảy ra. Vui lòng thử lại.'"></p>
+        <a th:href="@{/dashboard}">Quay lại Bảng điều khiển</a>
+    </div>
+</body>
+</html>

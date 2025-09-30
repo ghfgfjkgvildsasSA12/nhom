@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: (~{::head}, ~{::body})}">
+<head>
+    <title>Quản lý Thời khóa biểu</title>
+</head>
+<body>
+    <div th:fragment="content">
+        <h2>Quản lý Thời khóa biểu</h2>
+        <a th:href="@{/schedules/new}">Thêm Thời khóa biểu Mới</a>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Trường</th>
+                <th>Lớp</th>
+                <th>Môn học</th>
+                <th>Giáo viên</th>
+                <th>Ngày</th>
+                <th>Tiết</th>
+                <th>Phòng</th>
+                <th>Hành động</th>
+            </tr>
+            <tr th:each="schedule : ${schedules}">
+                <td th:text="${schedule.id}"></td>
+                <td th:text="${schedule.school?.name} ?: 'N/A'"></td>
+                <td th:text="${schedule.classEntity?.name} ?: 'N/A'"></td>
+                <td th:text="${schedule.subject?.name} ?: 'N/A'"></td>
+                <td th:text="${schedule.teacher?.fullName} ?: 'N/A'"></td>
+                <td th:text="${schedule.dayOfWeek}"></td>
+                <td th:text="${schedule.period}"></td>
+                <td th:text="${schedule.room}"></td>
+                <td>
+                    <a th:href="@{/schedules/edit/{id}(id=${schedule.id})}">Sửa</a>
+                    <a th:href="@{/schedules/delete/{id}(id=${schedule.id})}" onclick="return confirmDelete();">Xóa</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

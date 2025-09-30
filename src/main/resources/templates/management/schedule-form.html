@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: (~{::head}, ~{::body})}">
+<head>
+    <title>Form Thời khóa biểu</title>
+</head>
+<body>
+    <div th:fragment="content">
+        <h2>Form Thời khóa biểu</h2>
+        <form th:action="@{/schedules}" th:object="${schedule}" method="post">
+            <label>Trường:</label>
+            <select th:field="*{school.id}" required>
+                <option value="">Chọn trường</option>
+                <option th:each="school : ${schools}" th:value="${school.id}" th:text="${school.name}"></option>
+            </select><br/>
+            <label>Lớp:</label>
+            <select th:field="*{classEntity.id}" required>
+                <option value="">Chọn lớp</option>
+                <option th:each="classEntity : ${classes}" th:value="${classEntity.id}" th:text="${classEntity.name}"></option>
+            </select><br/>
+            <label>Môn học:</label>
+            <select th:field="*{subject.id}" required>
+                <option value="">Chọn môn học</option>
+                <option th:each="subject : ${subjects}" th:value="${subject.id}" th:text="${subject.name}"></option>
+            </select><br/>
+            <label>Giáo viên:</label>
+            <select th:field="*{teacher.id}" required>
+                <option value="">Chọn giáo viên</option>
+                <option th:each="teacher : ${teachers}" th:value="${teacher.id}" th:text="${teacher.fullName}"></option>
+            </select><br/>
+            <label>Ngày trong tuần (1-7):</label>
+            <input th:field="*{dayOfWeek}" type="number" min="1" max="7" required/><br/>
+            <label>Tiết (1-10):</label>
+            <input th:field="*{period}" type="number" min="1" max="10" required/><br/>
+            <label>Phòng:</label>
+            <input th:field="*{room}" required/><br/>
+            <input type="hidden" th:field="*{id}"/>
+            <button type="submit">Lưu</button>
+            <a th:href="@{/schedules}">Hủy</a>
+        </form>
+    </div>
+</body>
+</html>
