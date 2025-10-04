@@ -10,7 +10,7 @@ import org.springframework.security.config.annotation.authentication.configurati
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -28,19 +28,19 @@ public class SecurityConfig {
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http, AuthenticationManager authManager) throws Exception {
         http
-            .csrf().disable()
-            .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-            .and()
+            .csrf(csrf -> csrf.disable())
+            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(authorize -> authorize
                 .requestMatchers("/login", "/static/**").permitAll()
                 .requestMatchers("/dashboard").authenticated()
                 .requestMatchers("/schools/**").hasRole("SUPER_ADMIN")
-                .requestMatchers("/users/**", "/classes/**", "/subjects/**", "/schedules/**", "/records/**", "/announcements/**").hasAnyRole("ADMIN", "TEACHER")
+                .requestMatchers("/users/**", "/classes/**", "/subjects/**", "/schedules/**", "/records/**", "/announcements/**")
+                    .hasAnyRole("ADMIN", "TEACHER")
                 .anyRequest().authenticated()
             )
-            .addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+            .addFilterBefore(jwtAuthenticationFilter(authManager), UsernamePasswordAuthenticationFilter.class)
             .formLogin(form -> form
                 .loginPage("/login")
                 .defaultSuccessUrl("/dashboard", true)
@@ -50,6 +50,7 @@ public class SecurityConfig {
                 .logoutSuccessUrl("/login")
                 .permitAll()
             );
+
         return http.build();
     }
 
@@ -59,12 +60,12 @@ public class SecurityConfig {
     }
 
     @Bean
-    public JwtAuthenticationFilter jwtAuthenticationFilter() {
-        return new JwtAuthenticationFilter(userDetailsService, jwtUtil); // Không cần AuthenticationManager
+    public JwtAuthenticationFilter jwtAuthenticationFilter(AuthenticationManager authenticationManager) {
+        return new JwtAuthenticationFilter(userDetailsService, jwtUtil, authenticationManager);
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance(); // Thay bằng BCryptPasswordEncoder cho prod
+        return new BCryptPasswordEncoder();
     }
 }
