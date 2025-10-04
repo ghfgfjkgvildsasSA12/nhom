@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: (~{::head}, ~{::body})}">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Bảng điều khiển Học sinh</title>
+    <title>Bảng điều khiển Admin</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script th:src="@{/js/script.js}" defer></script>
 </head>
 <body>
-    <div th:fragment="content">
-        <h2>Bảng điều khiển Học sinh</h2>
-        <p>Chào, <span th:text="${user.fullName}"></span> (Học sinh)</p>
-        <p>Lộ trình học tập: <span th:text="${learningPath}"></span></p>
-        <h3>Thông tin cá nhân</h3>
-        <p>Email: <span th:text="${user.email}"></span></p>
-        <p>Trường: <span th:text="${user.school?.name} ?: 'N/A'"></span></p>
-        <h3>Hoạt động</h3>
-        <ul>
-            <li><a th:href="@{/records}">Xem điểm số</a></li>
-            <li><a th:href="@{/schedules}">Xem thời khóa biểu</a></li>
-            <li><a th:href="@{/ai/suggestions}">Xem gợi ý học tập</a></li>
-        </ul>
-    </div>
+    <div th:replace="~{layout :: header}"></div>
+    
+    <h2>Bảng điều khiển Admin</h2>
+    <p>Chào, <span th:text="${user.fullName}"></span> (Admin)</p>
+    <p>Trường: <span th:text="${user.school?.name} ?: 'N/A'"></span></p>
+    
+    <h3>Dự báo AI</h3>
+    <p th:text="${prediction}"></p>
+    
+    <h3>Hoạt động</h3>
+    <ul>
+        <li><a th:href="@{/users}">Quản lý Người dùng</a></li>
+        <li><a th:href="@{/classes}">Quản lý Lớp</a></li>
+        <li><a th:href="@{/subjects}">Quản lý Môn học</a></li>
+        <li><a th:href="@{/schedules}">Quản lý Thời khóa biểu</a></li>
+        <li><a th:href="@{/records}">Quản lý Điểm số</a></li>
+        <li><a th:href="@{/announcements}">Quản lý Thông báo</a></li>
+    </ul>
 </body>
 </html>

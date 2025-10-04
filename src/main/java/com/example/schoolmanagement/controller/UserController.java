@@ -2,6 +2,8 @@ package com.example.schoolmanagement.controller;
 
 import com.example.schoolmanagement.entity.User;
 import com.example.schoolmanagement.service.UserService;
+import com.example.schoolmanagement.service.SchoolService;
+import com.example.schoolmanagement.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +16,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class UserController {
     @Autowired
     private UserService userService;
+    
+    @Autowired
+    private SchoolService schoolService;
+    
+    @Autowired
+    private RoleService roleService;
 
     @GetMapping("/users")
     public String listUsers(Model model) {
@@ -24,6 +32,8 @@ public class UserController {
     @GetMapping("/users/new")
     public String newUser(Model model) {
         model.addAttribute("user", new User());
+        model.addAttribute("schools", schoolService.getAllSchools());
+        model.addAttribute("roles", roleService.getAllRoles());
         return "management/user-form";
     }
 
@@ -36,6 +46,8 @@ public class UserController {
     @GetMapping("/users/edit/{id}")
     public String editUser(@PathVariable Integer id, Model model) {
         model.addAttribute("user", userService.getUserById(id));
+        model.addAttribute("schools", schoolService.getAllSchools());
+        model.addAttribute("roles", roleService.getAllRoles());
         return "management/user-form";
     }
 

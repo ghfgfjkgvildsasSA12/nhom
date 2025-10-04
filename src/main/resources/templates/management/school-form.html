@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: (~{::head}, ~{::body})}">
-<head>
-    <title>Form Trường</title>
-</head>
-<body>
-    <div th:fragment="content">
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Form Trường</title>
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+        <script th:src="@{/js/script.js}" defer></script>
+    </head>
+    <body>
+        <div th:replace="~{layout :: header}"></div>
+
         <h2>Form Trường</h2>
         <form th:action="@{/schools}" th:object="${school}" method="post">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
             <label>Tên:</label>
             <input th:field="*{name}" required/><br/>
             <label>Mã:</label>
@@ -26,6 +30,5 @@
             <button type="submit">Lưu</button>
             <a th:href="@{/schools}">Hủy</a>
         </form>
-    </div>
-</body>
+    </body>
 </html>

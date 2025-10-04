@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:fragment="head">
+    <title th:text="${title} ?: 'Quản lý Trường học'"></title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <script th:src="@{/js/script.js}" defer></script>
+</head>
+<body>
+    <div th:fragment="header">
+        <h1>Quản lý Trường học</h1>
+        <nav>
+            <ul>
+                <li><a th:href="@{/dashboard}">Bảng điều khiển</a></li>
+                <li sec:authorize="hasRole('SUPER_ADMIN')"><a th:href="@{/schools}">Quản lý Trường</a></li>
+                <li sec:authorize="hasAnyRole('ADMIN', 'TEACHER')"><a th:href="@{/users}">Quản lý Người dùng</a></li>
+                <li sec:authorize="hasAnyRole('ADMIN', 'TEACHER')"><a th:href="@{/classes}">Quản lý Lớp</a></li>
+                <li sec:authorize="hasAnyRole('ADMIN', 'TEACHER')"><a th:href="@{/subjects}">Quản lý Môn học</a></li>
+                <li sec:authorize="hasAnyRole('ADMIN', 'TEACHER')"><a th:href="@{/schedules}">Quản lý Thời khóa biểu</a></li>
+                <li sec:authorize="hasAnyRole('ADMIN', 'TEACHER')"><a th:href="@{/records}">Quản lý Hồ sơ</a></li>
+                <li sec:authorize="hasAnyRole('ADMIN', 'TEACHER')"><a th:href="@{/announcements}">Quản lý Thông báo</a></li>
+                <li sec:authorize="isAuthenticated()">
+                    <form th:action="@{/logout}" method="post" style="display:inline;">
+                        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                        <button type="submit" style="background:none;border:none;color:#fff;cursor:pointer;text-decoration:underline;">Đăng xuất</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+    <main>
+        <th:block th:replace="${content}"></th:block>
+    </main>
+</body>
+</html>

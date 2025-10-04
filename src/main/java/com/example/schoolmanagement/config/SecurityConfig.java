@@ -1,53 +1,43 @@
 package com.example.schoolmanagement.config;
 
-import com.example.schoolmanagement.security.CustomUserDetailsService;
-import com.example.schoolmanagement.security.JwtAuthenticationFilter;
-import com.example.schoolmanagement.security.JwtUtil;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
-    private final CustomUserDetailsService userDetailsService;
-    private final JwtUtil jwtUtil;
-
-    public SecurityConfig(CustomUserDetailsService userDetailsService, JwtUtil jwtUtil) {
-        this.userDetailsService = userDetailsService;
-        this.jwtUtil = jwtUtil;
-    }
-
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http, AuthenticationManager authManager) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+            // Tắt CSRF tạm thời để test
             .csrf(csrf -> csrf.disable())
-            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+            
+            // Cấu hình authorization đơn giản
             .authorizeHttpRequests(authorize -> authorize
-                .requestMatchers("/login", "/static/**").permitAll()
-                .requestMatchers("/dashboard").authenticated()
-                .requestMatchers("/schools/**").hasRole("SUPER_ADMIN")
-                .requestMatchers("/users/**", "/classes/**", "/subjects/**", "/schedules/**", "/records/**", "/announcements/**")
-                    .hasAnyRole("ADMIN", "TEACHER")
+                // Cho phép truy cập không cần login
+                .requestMatchers("/login", "/error", "/css/**", "/js/**", "/static/**").permitAll()
+                // Các URL khác cần authentication
                 .anyRequest().authenticated()
             )
-            .addFilterBefore(jwtAuthenticationFilter(authManager), UsernamePasswordAuthenticationFilter.class)
+            
+            // Form login cơ bản
             .formLogin(form -> form
                 .loginPage("/login")
                 .defaultSuccessUrl("/dashboard", true)
                 .permitAll()
             )
+            
+            // Logout
             .logout(logout -> logout
-                .logoutSuccessUrl("/login")
+                .logoutSuccessUrl("/login?logout")
                 .permitAll()
             );
 
@@ -55,13 +45,8 @@ public class SecurityConfig {
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
-        return authenticationConfiguration.getAuthenticationManager();
-    }
-
-    @Bean
-    public JwtAuthenticationFilter jwtAuthenticationFilter(AuthenticationManager authenticationManager) {
-        return new JwtAuthenticationFilter(userDetailsService, jwtUtil, authenticationManager);
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+        return config.getAuthenticationManager();
     }
 
     @Bean
