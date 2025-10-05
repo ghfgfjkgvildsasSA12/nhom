@@ -17,28 +17,50 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            // Tắt CSRF tạm thời để test
-            .csrf(csrf -> csrf.disable())
+            // Cấu hình CSRF
+            .csrf(csrf -> csrf
+                .ignoringRequestMatchers("/api/**") // Chỉ tắt cho API nếu cần
+            )
             
-            // Cấu hình authorization đơn giản
+            // Cấu hình authorization
             .authorizeHttpRequests(authorize -> authorize
-                // Cho phép truy cập không cần login
-                .requestMatchers("/login", "/error", "/css/**", "/js/**", "/static/**").permitAll()
-                // Các URL khác cần authentication
+                // Static resources
+                .requestMatchers("/css/**", "/js/**", "/images/**", "/static/**").permitAll()
+                // Auth pages
+                .requestMatchers("/", "/login", "/error").permitAll()
+                // Dashboard - chỉ cho phép user đã authenticated
+                .requestMatchers("/dashboard").authenticated()
+                // Admin pages
+                .requestMatchers("/schools/**").hasRole("SUPER_ADMIN")
+                .requestMatchers("/users/**", "/classes/**", "/subjects/**").hasAnyRole("SUPER_ADMIN", "ADMIN", "TEACHER")
+                .requestMatchers("/schedules/**", "/records/**", "/announcements/**").hasAnyRole("ADMIN", "TEACHER")
+                // Tất cả request khác cần authenticated
                 .anyRequest().authenticated()
             )
             
-            // Form login cơ bản
+            // Form login
             .formLogin(form -> form
                 .loginPage("/login")
-                .defaultSuccessUrl("/dashboard", true)
+                .loginProcessingUrl("/login") // URL xử lý login
+                .defaultSuccessUrl("/dashboard", true) // Redirect sau khi login thành công
+                .failureUrl("/login?error=true") // Redirect khi login thất bại
+                .usernameParameter("username") // Tên parameter cho username
+                .passwordParameter("password") // Tên parameter cho password
                 .permitAll()
             )
             
             // Logout
             .logout(logout -> logout
-                .logoutSuccessUrl("/login?logout")
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/login?logout=true")
+                .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID")
                 .permitAll()
+            )
+            
+            // Exception handling
+            .exceptionHandling(exception -> exception
+                .accessDeniedPage("/error")
             );
 
         return http.build();
