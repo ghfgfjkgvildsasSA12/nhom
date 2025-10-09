@@ -26,4 +26,9 @@ public class RefreshToken {
     private LocalDateTime createdAt;
 
     private LocalDateTime revokedAt;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+    }
 }

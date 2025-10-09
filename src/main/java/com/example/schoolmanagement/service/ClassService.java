@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.example.schoolmanagement.service;
 
 import com.example.schoolmanagement.entity.ClassEntity;
@@ -24,6 +20,14 @@ public class ClassService {
         return classRepository.findById(id).orElse(null);
     }
 
+    public List<ClassEntity> getClassesBySchool(Integer schoolId) {
+        return classRepository.findBySchoolId(schoolId);
+    }
+
+    public List<ClassEntity> getClassesByHomeroomTeacher(Integer teacherId) {
+        return classRepository.findByHomeroomTeacherId(teacherId);
+    }
+
     public ClassEntity saveClass(ClassEntity classEntity) {
         return classRepository.save(classEntity);
     }
@@ -32,3 +36,6 @@ public class ClassService {
         classRepository.deleteById(id);
     }
 }
+
+
+

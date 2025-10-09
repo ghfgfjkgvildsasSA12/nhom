@@ -7,6 +7,9 @@ package com.example.schoolmanagement.repository;
 
 import com.example.schoolmanagement.entity.ClassEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
 public interface ClassRepository extends JpaRepository<ClassEntity, Integer> {
+    List<ClassEntity> findBySchoolId(Integer schoolId);
+    List<ClassEntity> findByHomeroomTeacherId(Integer teacherId);
 }

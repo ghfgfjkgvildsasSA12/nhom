@@ -1,125 +1,340 @@
-2025-10-05T09:43:57.102+07:00  INFO 5232 --- [main] c.e.s.SchoolManagementApplication        : Starting SchoolManagementApplication using Java 21.0.8 with PID 5232 (C:\Users\Hoang\Documents\NetBeansProjects\school-management\target\classes started by Hoang in C:\Users\Hoang\Documents\NetBeansProjects\school-management)
-2025-10-05T09:43:57.112+07:00 DEBUG 5232 --- [main] c.e.s.SchoolManagementApplication        : Running with Spring Boot v3.3.4, Spring v6.1.13
-2025-10-05T09:43:57.113+07:00  INFO 5232 --- [main] c.e.s.SchoolManagementApplication        : No active profile set, falling back to 1 default profile: "default"
-2025-10-05T09:43:57.865+07:00  INFO 5232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-05T09:43:57.966+07:00  INFO 5232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 10 JPA repository interfaces.
-2025-10-05T09:43:58.637+07:00  INFO 5232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-10-05T09:43:58.653+07:00  INFO 5232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-05T09:43:58.654+07:00  INFO 5232 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2025-10-05T09:43:58.725+07:00  INFO 5232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-05T09:43:58.725+07:00  INFO 5232 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1569 ms
-2025-10-05T09:43:58.904+07:00  INFO 5232 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-05T09:43:58.973+07:00  INFO 5232 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2025-10-05T09:43:59.007+07:00  INFO 5232 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-05T09:43:59.293+07:00  INFO 5232 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-05T09:43:59.328+07:00  INFO 5232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-05T09:43:59.494+07:00  INFO 5232 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@cdbe995
-2025-10-05T09:43:59.496+07:00  INFO 5232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-05T09:43:59.558+07:00  WARN 5232 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2025-10-05T09:44:00.483+07:00  INFO 5232 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-05T09:44:00.658+07:00  INFO 5232 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-05T09:44:00.973+07:00  INFO 5232 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
-2025-10-05T09:44:01.015+07:00 DEBUG 5232 --- [main] c.e.s.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
-2025-10-05T09:44:01.154+07:00  WARN 5232 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-05T09:44:01.549+07:00 DEBUG 5232 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
-2025-10-05T09:44:01.963+07:00  INFO 5232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-10-05T09:44:01.973+07:00  INFO 5232 --- [main] c.e.s.SchoolManagementApplication        : Started SchoolManagementApplication in 5.29 seconds (process running for 5.616)
-2025-10-05T09:44:22.542+07:00  INFO 5232 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-05T09:44:22.543+07:00  INFO 5232 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-05T09:44:22.544+07:00  INFO 5232 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-10-05T09:44:22.560+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /login
-2025-10-05T09:44:22.567+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /login
-2025-10-05T09:44:22.836+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:44:22.846+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /css/style.css
-2025-10-05T09:44:22.847+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /css/style.css
-2025-10-05T09:44:22.857+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:44:26.877+07:00 DEBUG 5232 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
-2025-10-05T09:44:26.878+07:00 DEBUG 5232 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:44:26.880+07:00 DEBUG 5232 --- [http-nio-8080-exec-4] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
-2025-10-05T09:44:26.885+07:00 DEBUG 5232 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /login
-2025-10-05T09:44:26.886+07:00 DEBUG 5232 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /login
-2025-10-05T09:44:26.893+07:00 DEBUG 5232 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:44:51.156+07:00 DEBUG 5232 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /login
-2025-10-05T09:44:51.382+07:00  WARN 5232 --- [http-nio-8080-exec-5] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
-2025-10-05T09:44:51.382+07:00 DEBUG 5232 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to authenticate since password does not match stored value
-2025-10-05T09:44:51.388+07:00 DEBUG 5232 --- [http-nio-8080-exec-5] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /login?error=true
-2025-10-05T09:44:51.393+07:00 DEBUG 5232 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /login?error=true
-2025-10-05T09:44:51.399+07:00 DEBUG 5232 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /login?error=true
-2025-10-05T09:44:51.405+07:00 DEBUG 5232 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:44:51.426+07:00 DEBUG 5232 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /css/style.css
-2025-10-05T09:44:51.426+07:00 DEBUG 5232 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /css/style.css
-2025-10-05T09:44:51.430+07:00 DEBUG 5232 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:44:51.474+07:00 DEBUG 5232 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
-2025-10-05T09:44:51.474+07:00 DEBUG 5232 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:44:51.475+07:00 DEBUG 5232 --- [http-nio-8080-exec-8] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
-2025-10-05T09:44:51.479+07:00 DEBUG 5232 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /login
-2025-10-05T09:44:51.479+07:00 DEBUG 5232 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /login
-2025-10-05T09:44:51.484+07:00 DEBUG 5232 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:11.549+07:00 DEBUG 5232 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /login
-2025-10-05T09:45:11.554+07:00  WARN 5232 --- [http-nio-8080-exec-10] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
-2025-10-05T09:45:11.554+07:00 DEBUG 5232 --- [http-nio-8080-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to authenticate since password does not match stored value
-2025-10-05T09:45:11.554+07:00 DEBUG 5232 --- [http-nio-8080-exec-10] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /login?error=true
-2025-10-05T09:45:11.558+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /login?error=true
-2025-10-05T09:45:11.558+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /login?error=true
-2025-10-05T09:45:11.569+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:11.590+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /css/style.css
-2025-10-05T09:45:11.591+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /css/style.css
-2025-10-05T09:45:11.594+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:11.622+07:00 DEBUG 5232 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
-2025-10-05T09:45:11.622+07:00 DEBUG 5232 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:11.623+07:00 DEBUG 5232 --- [http-nio-8080-exec-4] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
-2025-10-05T09:45:11.626+07:00 DEBUG 5232 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /login
-2025-10-05T09:45:11.627+07:00 DEBUG 5232 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /login
-2025-10-05T09:45:11.631+07:00 DEBUG 5232 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:15.155+07:00 DEBUG 5232 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /css/style.css
-2025-10-05T09:45:15.155+07:00 DEBUG 5232 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /css/style.css
-2025-10-05T09:45:15.158+07:00 DEBUG 5232 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:15.167+07:00 DEBUG 5232 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /.well-known/appspecific/com.chrome.devtools.json
-2025-10-05T09:45:15.167+07:00 DEBUG 5232 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:15.170+07:00 DEBUG 5232 --- [http-nio-8080-exec-6] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/.well-known/appspecific/com.chrome.devtools.json?continue to session
-2025-10-05T09:45:15.171+07:00 DEBUG 5232 --- [http-nio-8080-exec-6] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
-2025-10-05T09:45:15.173+07:00 DEBUG 5232 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /login
-2025-10-05T09:45:15.173+07:00 DEBUG 5232 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /login
-2025-10-05T09:45:15.177+07:00 DEBUG 5232 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:18.516+07:00 DEBUG 5232 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /login?error=true
-2025-10-05T09:45:18.517+07:00 DEBUG 5232 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /login?error=true
-2025-10-05T09:45:18.522+07:00 DEBUG 5232 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:18.544+07:00 DEBUG 5232 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /css/style.css
-2025-10-05T09:45:18.545+07:00 DEBUG 5232 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /css/style.css
-2025-10-05T09:45:18.549+07:00 DEBUG 5232 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:18.549+07:00 DEBUG 5232 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /.well-known/appspecific/com.chrome.devtools.json
-2025-10-05T09:45:18.550+07:00 DEBUG 5232 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:18.551+07:00 DEBUG 5232 --- [http-nio-8080-exec-10] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/.well-known/appspecific/com.chrome.devtools.json?continue to session
-2025-10-05T09:45:18.551+07:00 DEBUG 5232 --- [http-nio-8080-exec-10] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
-2025-10-05T09:45:18.553+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /login
-2025-10-05T09:45:18.553+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /login
-2025-10-05T09:45:18.557+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:18.653+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
-2025-10-05T09:45:18.654+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:45:18.655+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
-2025-10-05T09:45:18.660+07:00 DEBUG 5232 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /login
-2025-10-05T09:45:18.660+07:00 DEBUG 5232 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /login
-2025-10-05T09:45:18.665+07:00 DEBUG 5232 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:46:35.103+07:00 DEBUG 5232 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /login
-2025-10-05T09:46:35.109+07:00  WARN 5232 --- [http-nio-8080-exec-6] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
-2025-10-05T09:46:35.109+07:00 DEBUG 5232 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to authenticate since password does not match stored value
-2025-10-05T09:46:35.109+07:00 DEBUG 5232 --- [http-nio-8080-exec-6] o.s.s.web.DefaultRedirectStrategy        : Redirecting to /login?error=true
-2025-10-05T09:46:35.114+07:00 DEBUG 5232 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /login?error=true
-2025-10-05T09:46:35.114+07:00 DEBUG 5232 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /login?error=true
-2025-10-05T09:46:35.119+07:00 DEBUG 5232 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:46:35.140+07:00 DEBUG 5232 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /.well-known/appspecific/com.chrome.devtools.json
-2025-10-05T09:46:35.140+07:00 DEBUG 5232 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:46:35.141+07:00 DEBUG 5232 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /css/style.css
-2025-10-05T09:46:35.141+07:00 DEBUG 5232 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /css/style.css
-2025-10-05T09:46:35.141+07:00 DEBUG 5232 --- [http-nio-8080-exec-8] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/.well-known/appspecific/com.chrome.devtools.json?continue to session
-2025-10-05T09:46:35.141+07:00 DEBUG 5232 --- [http-nio-8080-exec-8] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
-2025-10-05T09:46:35.144+07:00 DEBUG 5232 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /login
-2025-10-05T09:46:35.144+07:00 DEBUG 5232 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:46:35.144+07:00 DEBUG 5232 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /login
-2025-10-05T09:46:35.149+07:00 DEBUG 5232 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:46:35.257+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
-2025-10-05T09:46:35.258+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2025-10-05T09:46:35.258+07:00 DEBUG 5232 --- [http-nio-8080-exec-2] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
-2025-10-05T09:46:35.265+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /login
-2025-10-05T09:46:35.265+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /login
-2025-10-05T09:46:35.273+07:00 DEBUG 5232 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:09:17.228+07:00  INFO 22024 --- [main] c.e.s.SchoolManagementApplication        : Starting SchoolManagementApplication using Java 21.0.8 with PID 22024 (C:\Users\Hoang\Documents\NetBeansProjects\school-management\target\classes started by Hoang in C:\Users\Hoang\Documents\NetBeansProjects\school-management)
+2025-10-06T19:09:17.239+07:00 DEBUG 22024 --- [main] c.e.s.SchoolManagementApplication        : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-10-06T19:09:17.240+07:00  INFO 22024 --- [main] c.e.s.SchoolManagementApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T19:09:17.967+07:00  INFO 22024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-06T19:09:18.061+07:00  INFO 22024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 10 JPA repository interfaces.
+2025-10-06T19:09:18.596+07:00  INFO 22024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-06T19:09:18.612+07:00  INFO 22024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-06T19:09:18.613+07:00  INFO 22024 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-10-06T19:09:18.679+07:00  INFO 22024 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-06T19:09:18.679+07:00  INFO 22024 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1399 ms
+2025-10-06T19:09:18.828+07:00  INFO 22024 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-06T19:09:18.922+07:00  INFO 22024 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-10-06T19:09:18.964+07:00  INFO 22024 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-06T19:09:19.318+07:00  INFO 22024 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-06T19:09:19.351+07:00  INFO 22024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-06T19:09:19.525+07:00  INFO 22024 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ec5f944
+2025-10-06T19:09:19.527+07:00  INFO 22024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-06T19:09:19.590+07:00  WARN 22024 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-10-06T19:09:20.672+07:00  INFO 22024 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-06T19:09:20.860+07:00  INFO 22024 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-06T19:09:21.160+07:00 DEBUG 22024 --- [main] c.e.s.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-10-06T19:09:21.207+07:00  INFO 22024 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-06T19:09:21.299+07:00  WARN 22024 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-06T19:09:21.566+07:00 DEBUG 22024 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-06T19:09:21.714+07:00  WARN 22024 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-06T19:09:21.843+07:00  INFO 22024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-06T19:09:21.850+07:00  INFO 22024 --- [main] c.e.s.SchoolManagementApplication        : Started SchoolManagementApplication in 5.054 seconds (process running for 5.413)
+2025-10-06T19:09:46.677+07:00  INFO 22024 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-06T19:09:46.678+07:00  INFO 22024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-06T19:09:46.679+07:00  INFO 22024 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-06T19:09:46.693+07:00 DEBUG 22024 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/test
+2025-10-06T19:09:46.703+07:00 DEBUG 22024 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:09:46.716+07:00 DEBUG 22024 --- [http-nio-8080-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/auth/test?continue to session
+2025-10-06T19:09:46.717+07:00 DEBUG 22024 --- [http-nio-8080-exec-1] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-10-06T19:09:46.723+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-10-06T19:09:46.723+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-10-06T19:09:46.741+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:09:46.748+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-10-06T19:09:46.749+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-10-06T19:09:46.816+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:09:53.019+07:00 DEBUG 22024 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/login
+2025-10-06T19:09:53.020+07:00 DEBUG 22024 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:09:53.021+07:00 DEBUG 22024 --- [http-nio-8080-exec-10] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/api/auth/login?continue to session
+2025-10-06T19:09:53.021+07:00 DEBUG 22024 --- [http-nio-8080-exec-10] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-10-06T19:09:53.023+07:00 DEBUG 22024 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-10-06T19:09:53.024+07:00 DEBUG 22024 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-10-06T19:09:53.027+07:00 DEBUG 22024 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:09:53.028+07:00 DEBUG 22024 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-10-06T19:09:53.028+07:00 DEBUG 22024 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-10-06T19:09:53.030+07:00 DEBUG 22024 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:09:56.978+07:00 DEBUG 22024 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-10-06T19:09:56.978+07:00 DEBUG 22024 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-10-06T19:09:56.979+07:00 DEBUG 22024 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:09:56.979+07:00 DEBUG 22024 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-10-06T19:09:56.980+07:00 DEBUG 22024 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-10-06T19:09:56.981+07:00 DEBUG 22024 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:10:37.498+07:00 DEBUG 22024 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2025-10-06T19:10:37.499+07:00 DEBUG 22024 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:10:37.499+07:00 DEBUG 22024 --- [http-nio-8080-exec-8] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-10-06T19:10:48.796+07:00 DEBUG 22024 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-10-06T19:10:48.797+07:00 DEBUG 22024 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-10-06T19:10:48.798+07:00 DEBUG 22024 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:10:48.799+07:00 DEBUG 22024 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-10-06T19:10:48.800+07:00 DEBUG 22024 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-10-06T19:10:48.822+07:00 DEBUG 22024 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:10:48.858+07:00 DEBUG 22024 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2025-10-06T19:10:48.859+07:00 DEBUG 22024 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:10:48.859+07:00 DEBUG 22024 --- [http-nio-8080-exec-1] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-10-06T19:10:48.863+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-10-06T19:10:48.864+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-10-06T19:10:48.865+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:10:48.866+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-10-06T19:10:48.867+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-10-06T19:10:48.869+07:00 DEBUG 22024 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:11:13.972+07:00 DEBUG 22024 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2025-10-06T19:11:13.973+07:00 DEBUG 22024 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:11:13.973+07:00 DEBUG 22024 --- [http-nio-8080-exec-6] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-10-06T19:11:14.853+07:00 DEBUG 22024 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2025-10-06T19:11:14.853+07:00 DEBUG 22024 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:11:14.853+07:00 DEBUG 22024 --- [http-nio-8080-exec-10] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-10-06T19:11:16.435+07:00 DEBUG 22024 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2025-10-06T19:11:16.435+07:00 DEBUG 22024 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:11:16.435+07:00 DEBUG 22024 --- [http-nio-8080-exec-4] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-10-06T19:12:59.745+07:00  INFO 12084 --- [main] c.e.s.SchoolManagementApplication        : Starting SchoolManagementApplication using Java 21.0.8 with PID 12084 (C:\Users\Hoang\Documents\NetBeansProjects\school-management\target\classes started by Hoang in C:\Users\Hoang\Documents\NetBeansProjects\school-management)
+2025-10-06T19:12:59.747+07:00 DEBUG 12084 --- [main] c.e.s.SchoolManagementApplication        : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-10-06T19:12:59.748+07:00  INFO 12084 --- [main] c.e.s.SchoolManagementApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T19:13:00.545+07:00  INFO 12084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-06T19:13:00.651+07:00  INFO 12084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 10 JPA repository interfaces.
+2025-10-06T19:13:01.215+07:00  INFO 12084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-06T19:13:01.230+07:00  INFO 12084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-06T19:13:01.230+07:00  INFO 12084 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-10-06T19:13:01.290+07:00  INFO 12084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-06T19:13:01.290+07:00  INFO 12084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1500 ms
+2025-10-06T19:13:01.423+07:00  INFO 12084 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-06T19:13:01.485+07:00  INFO 12084 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-10-06T19:13:01.559+07:00  INFO 12084 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-06T19:13:01.956+07:00  INFO 12084 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-06T19:13:01.983+07:00  INFO 12084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-06T19:13:02.125+07:00  INFO 12084 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@192b472d
+2025-10-06T19:13:02.127+07:00  INFO 12084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-06T19:13:02.180+07:00  WARN 12084 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-10-06T19:13:03.189+07:00  INFO 12084 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-06T19:13:03.343+07:00  INFO 12084 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-06T19:13:03.618+07:00 DEBUG 12084 --- [main] c.e.s.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-10-06T19:13:03.668+07:00  INFO 12084 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-06T19:13:03.766+07:00  WARN 12084 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-06T19:13:04.061+07:00 DEBUG 12084 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-06T19:13:04.194+07:00  WARN 12084 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-06T19:13:04.317+07:00  INFO 12084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-06T19:13:04.325+07:00  INFO 12084 --- [main] c.e.s.SchoolManagementApplication        : Started SchoolManagementApplication in 4.979 seconds (process running for 5.333)
+2025-10-06T19:13:22.990+07:00  INFO 12084 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-06T19:13:22.990+07:00  INFO 12084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-06T19:13:22.991+07:00  INFO 12084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-06T19:13:23.007+07:00 DEBUG 12084 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/login
+2025-10-06T19:13:23.022+07:00 DEBUG 12084 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/login
+2025-10-06T19:13:23.031+07:00  WARN 12084 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2025-10-06T19:13:23.033+07:00 DEBUG 12084 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:13:23.045+07:00 DEBUG 12084 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-10-06T19:13:23.046+07:00 DEBUG 12084 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-10-06T19:13:23.116+07:00 DEBUG 12084 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:14:10.824+07:00 DEBUG 12084 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:14:10.825+07:00 DEBUG 12084 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:14:11.139+07:00 DEBUG 12084 --- [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to find user 'test@test.com'
+2025-10-06T19:14:11.145+07:00 DEBUG 12084 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:18:52.795+07:00 DEBUG 12084 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2025-10-06T19:18:52.795+07:00 DEBUG 12084 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured OPTIONS /api/auth/login
+2025-10-06T19:18:52.803+07:00 DEBUG 12084 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:18:52.807+07:00 DEBUG 12084 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:18:52.807+07:00 DEBUG 12084 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:18:52.898+07:00 DEBUG 12084 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:18:52.914+07:00 DEBUG 12084 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:18:56.653+07:00 DEBUG 12084 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:18:56.653+07:00 DEBUG 12084 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:18:56.726+07:00 DEBUG 12084 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:18:56.731+07:00 DEBUG 12084 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:19:04.581+07:00 DEBUG 12084 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-10-06T19:19:04.582+07:00 DEBUG 12084 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-10-06T19:19:04.585+07:00 DEBUG 12084 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:19:04.586+07:00 DEBUG 12084 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-10-06T19:19:04.586+07:00 DEBUG 12084 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-10-06T19:19:04.605+07:00 DEBUG 12084 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:20:59.242+07:00  INFO 20048 --- [main] c.e.s.SchoolManagementApplication        : Starting SchoolManagementApplication using Java 21.0.8 with PID 20048 (C:\Users\Hoang\Documents\NetBeansProjects\school-management\target\classes started by Hoang in C:\Users\Hoang\Documents\NetBeansProjects\school-management)
+2025-10-06T19:20:59.244+07:00 DEBUG 20048 --- [main] c.e.s.SchoolManagementApplication        : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-10-06T19:20:59.244+07:00  INFO 20048 --- [main] c.e.s.SchoolManagementApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T19:20:59.979+07:00  INFO 20048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-06T19:21:00.095+07:00  INFO 20048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 10 JPA repository interfaces.
+2025-10-06T19:21:00.594+07:00  INFO 20048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-06T19:21:00.607+07:00  INFO 20048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-06T19:21:00.607+07:00  INFO 20048 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-10-06T19:21:00.660+07:00  INFO 20048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-06T19:21:00.660+07:00  INFO 20048 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1379 ms
+2025-10-06T19:21:00.777+07:00  INFO 20048 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-06T19:21:00.859+07:00  INFO 20048 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-10-06T19:21:00.903+07:00  INFO 20048 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-06T19:21:01.179+07:00  INFO 20048 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-06T19:21:01.208+07:00  INFO 20048 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-06T19:21:01.354+07:00  INFO 20048 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e3ee128
+2025-10-06T19:21:01.356+07:00  INFO 20048 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-06T19:21:01.409+07:00  WARN 20048 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-10-06T19:21:02.356+07:00  INFO 20048 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-06T19:21:02.480+07:00  INFO 20048 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-06T19:21:02.743+07:00 DEBUG 20048 --- [main] c.e.s.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-10-06T19:21:02.791+07:00  INFO 20048 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-06T19:21:02.907+07:00  WARN 20048 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-06T19:21:03.162+07:00 DEBUG 20048 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-06T19:21:03.290+07:00  WARN 20048 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-06T19:21:03.410+07:00  INFO 20048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-06T19:21:03.417+07:00  INFO 20048 --- [main] c.e.s.SchoolManagementApplication        : Started SchoolManagementApplication in 4.595 seconds (process running for 4.906)
+2025-10-06T19:22:24.900+07:00  INFO 20048 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-06T19:22:24.901+07:00  INFO 20048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-06T19:22:24.902+07:00  INFO 20048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-06T19:22:24.917+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:22:24.925+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:22:25.230+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to find user 'admin@test.com'
+2025-10-06T19:22:25.256+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:25:56.831+07:00 DEBUG 20048 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:25:56.838+07:00 DEBUG 20048 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:25:56.926+07:00 DEBUG 20048 --- [http-nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:25:56.941+07:00 DEBUG 20048 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:27:15.561+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:27:15.561+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:27:15.632+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to find user 'test@test.com'
+2025-10-06T19:27:15.633+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:28:13.157+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:28:13.158+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:28:13.236+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:28:13.240+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:30:54.205+07:00 DEBUG 20048 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:30:54.205+07:00 DEBUG 20048 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:30:54.277+07:00 DEBUG 20048 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:30:54.281+07:00 DEBUG 20048 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:31:16.765+07:00 DEBUG 20048 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-10-06T19:31:16.766+07:00 DEBUG 20048 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-10-06T19:31:16.771+07:00 DEBUG 20048 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:31:16.777+07:00 DEBUG 20048 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-10-06T19:31:16.778+07:00 DEBUG 20048 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-10-06T19:31:16.800+07:00 DEBUG 20048 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:31:20.446+07:00 DEBUG 20048 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /.well-known/appspecific/com.chrome.devtools.json
+2025-10-06T19:31:20.447+07:00 DEBUG 20048 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:31:20.459+07:00 DEBUG 20048 --- [http-nio-8080-exec-7] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/.well-known/appspecific/com.chrome.devtools.json?continue to session
+2025-10-06T19:31:20.460+07:00 DEBUG 20048 --- [http-nio-8080-exec-7] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-10-06T19:31:20.465+07:00 DEBUG 20048 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-10-06T19:31:20.466+07:00 DEBUG 20048 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-10-06T19:31:20.468+07:00 DEBUG 20048 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:31:20.468+07:00 DEBUG 20048 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-10-06T19:31:20.469+07:00 DEBUG 20048 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-10-06T19:31:20.489+07:00 DEBUG 20048 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:31:23.945+07:00 DEBUG 20048 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-10-06T19:31:23.946+07:00 DEBUG 20048 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-10-06T19:31:23.947+07:00 DEBUG 20048 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:31:23.948+07:00 DEBUG 20048 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-10-06T19:31:23.948+07:00 DEBUG 20048 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-10-06T19:31:23.950+07:00 DEBUG 20048 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:31:23.981+07:00 DEBUG 20048 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /.well-known/appspecific/com.chrome.devtools.json
+2025-10-06T19:31:23.982+07:00 DEBUG 20048 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:31:23.983+07:00 DEBUG 20048 --- [http-nio-8080-exec-8] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8080/.well-known/appspecific/com.chrome.devtools.json?continue to session
+2025-10-06T19:31:23.983+07:00 DEBUG 20048 --- [http-nio-8080-exec-8] o.s.s.web.DefaultRedirectStrategy        : Redirecting to http://localhost:8080/login
+2025-10-06T19:31:23.985+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /login
+2025-10-06T19:31:23.985+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /login
+2025-10-06T19:31:23.987+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:31:23.987+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-10-06T19:31:23.988+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-10-06T19:31:23.989+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:33:59.440+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:33:59.440+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:33:59.512+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:33:59.515+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:34:44.326+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:34:44.326+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:34:44.399+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:34:44.402+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:35:32.044+07:00 DEBUG 20048 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:35:32.044+07:00 DEBUG 20048 --- [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:35:32.117+07:00 DEBUG 20048 --- [http-nio-8080-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:35:32.121+07:00 DEBUG 20048 --- [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:36:00.191+07:00 DEBUG 20048 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:36:00.192+07:00 DEBUG 20048 --- [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:36:00.262+07:00 DEBUG 20048 --- [http-nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:36:00.265+07:00 DEBUG 20048 --- [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:36:01.422+07:00 DEBUG 20048 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:36:01.423+07:00 DEBUG 20048 --- [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:36:01.494+07:00 DEBUG 20048 --- [http-nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:36:01.497+07:00 DEBUG 20048 --- [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:36:01.894+07:00 DEBUG 20048 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:36:01.895+07:00 DEBUG 20048 --- [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:36:01.965+07:00 DEBUG 20048 --- [http-nio-8080-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:36:01.969+07:00 DEBUG 20048 --- [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:36:02.127+07:00 DEBUG 20048 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:36:02.128+07:00 DEBUG 20048 --- [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:36:02.198+07:00 DEBUG 20048 --- [http-nio-8080-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:36:02.201+07:00 DEBUG 20048 --- [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:36:02.294+07:00 DEBUG 20048 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:36:02.294+07:00 DEBUG 20048 --- [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:36:02.364+07:00 DEBUG 20048 --- [http-nio-8080-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:36:02.367+07:00 DEBUG 20048 --- [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:36:02.494+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:36:02.495+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:36:02.566+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:36:02.569+07:00 DEBUG 20048 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:36:02.645+07:00 DEBUG 20048 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:36:02.646+07:00 DEBUG 20048 --- [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:36:02.718+07:00 DEBUG 20048 --- [http-nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:36:02.720+07:00 DEBUG 20048 --- [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:36:02.869+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:36:02.870+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:36:02.941+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:36:02.944+07:00 DEBUG 20048 --- [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:36:03.070+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:36:03.071+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:36:03.141+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2025-10-06T19:36:03.144+07:00 DEBUG 20048 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:41:04.002+07:00  INFO 1088 --- [main] c.e.s.SchoolManagementApplication        : Starting SchoolManagementApplication using Java 21.0.8 with PID 1088 (C:\Users\Hoang\Documents\NetBeansProjects\school-management\target\classes started by Hoang in C:\Users\Hoang\Documents\NetBeansProjects\school-management)
+2025-10-06T19:41:04.004+07:00 DEBUG 1088 --- [main] c.e.s.SchoolManagementApplication        : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-10-06T19:41:04.004+07:00  INFO 1088 --- [main] c.e.s.SchoolManagementApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T19:41:04.635+07:00  INFO 1088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-06T19:41:04.714+07:00  INFO 1088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 10 JPA repository interfaces.
+2025-10-06T19:41:05.244+07:00  INFO 1088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-06T19:41:05.259+07:00  INFO 1088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-06T19:41:05.260+07:00  INFO 1088 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-10-06T19:41:05.316+07:00  INFO 1088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-06T19:41:05.317+07:00  INFO 1088 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1272 ms
+2025-10-06T19:41:05.448+07:00  INFO 1088 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-06T19:41:05.508+07:00  INFO 1088 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-10-06T19:41:05.541+07:00  INFO 1088 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-06T19:41:05.798+07:00  INFO 1088 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-06T19:41:05.825+07:00  INFO 1088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-06T19:41:06.005+07:00  INFO 1088 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e3ee128
+2025-10-06T19:41:06.009+07:00  INFO 1088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-06T19:41:06.067+07:00  WARN 1088 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-10-06T19:41:06.977+07:00  INFO 1088 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-06T19:41:07.114+07:00  INFO 1088 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-06T19:41:07.379+07:00 DEBUG 1088 --- [main] c.e.s.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-10-06T19:41:07.426+07:00  INFO 1088 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-06T19:41:07.524+07:00  WARN 1088 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-06T19:41:07.784+07:00 DEBUG 1088 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-06T19:41:07.915+07:00  WARN 1088 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-06T19:41:08.051+07:00  INFO 1088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-06T19:41:08.059+07:00  INFO 1088 --- [main] c.e.s.SchoolManagementApplication        : Started SchoolManagementApplication in 4.438 seconds (process running for 4.747)
+2025-10-06T19:41:26.906+07:00  INFO 1088 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-06T19:41:26.906+07:00  INFO 1088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-06T19:41:26.908+07:00  INFO 1088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-06T19:41:26.925+07:00 DEBUG 1088 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:41:26.943+07:00 DEBUG 1088 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:41:27.173+07:00 DEBUG 1088 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:41:44.175+07:00 DEBUG 1088 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:41:44.175+07:00 DEBUG 1088 --- [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:41:44.182+07:00 DEBUG 1088 --- [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-10-06T19:42:16.871+07:00  INFO 6132 --- [main] c.e.s.SchoolManagementApplication        : Starting SchoolManagementApplication using Java 21.0.8 with PID 6132 (C:\Users\Hoang\Documents\NetBeansProjects\school-management\target\classes started by Hoang in C:\Users\Hoang\Documents\NetBeansProjects\school-management)
+2025-10-06T19:42:16.873+07:00 DEBUG 6132 --- [main] c.e.s.SchoolManagementApplication        : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-10-06T19:42:16.873+07:00  INFO 6132 --- [main] c.e.s.SchoolManagementApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-10-06T19:42:17.508+07:00  INFO 6132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-06T19:42:17.608+07:00  INFO 6132 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 10 JPA repository interfaces.
+2025-10-06T19:42:18.181+07:00  INFO 6132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-06T19:42:18.201+07:00  INFO 6132 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-06T19:42:18.202+07:00  INFO 6132 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-10-06T19:42:18.257+07:00  INFO 6132 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-06T19:42:18.257+07:00  INFO 6132 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1350 ms
+2025-10-06T19:42:18.385+07:00  INFO 6132 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-06T19:42:18.440+07:00  INFO 6132 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-10-06T19:42:18.476+07:00  INFO 6132 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-06T19:42:18.792+07:00  INFO 6132 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-06T19:42:18.820+07:00  INFO 6132 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-06T19:42:18.966+07:00  INFO 6132 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@395a573c
+2025-10-06T19:42:18.969+07:00  INFO 6132 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-06T19:42:19.013+07:00  WARN 6132 --- [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2025-10-06T19:42:20.020+07:00  INFO 6132 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-06T19:42:20.193+07:00  INFO 6132 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-06T19:42:20.494+07:00 DEBUG 6132 --- [main] c.e.s.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-10-06T19:42:20.538+07:00  INFO 6132 --- [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-10-06T19:42:20.644+07:00  WARN 6132 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-06T19:42:20.903+07:00 DEBUG 6132 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-06T19:42:21.021+07:00  WARN 6132 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-10-06T19:42:21.136+07:00  INFO 6132 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-06T19:42:21.143+07:00  INFO 6132 --- [main] c.e.s.SchoolManagementApplication        : Started SchoolManagementApplication in 4.683 seconds (process running for 5.064)
+2025-10-06T19:42:49.547+07:00  INFO 6132 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-06T19:42:49.547+07:00  INFO 6132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-06T19:42:49.548+07:00  INFO 6132 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-06T19:42:49.565+07:00 DEBUG 6132 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2025-10-06T19:42:49.574+07:00 DEBUG 6132 --- [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+2025-10-06T19:42:49.805+07:00 DEBUG 6132 --- [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext

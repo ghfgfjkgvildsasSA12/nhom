@@ -13,7 +13,9 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer schoolId;
+    @ManyToOne
+    @JoinColumn(name = "school_id")
+    private School school;
 
     @Column(nullable = false)
     private String name;
@@ -21,4 +23,17 @@ public class Role {
     private String description;
 
     private LocalDateTime createdAt;
+
+    private LocalDateTime updatedAt;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = LocalDateTime.now();
+    }
 }
